@@ -21,11 +21,23 @@ const Hero = () => {
           transition={{ duration: 28, ease: 'easeInOut', repeat: Infinity, repeatType: 'mirror' }}
           className="h-full w-full"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/hero-new.jpg"
-            alt="Kenmos Engineering structural design"
-            className="h-full w-full object-cover object-center"
+          <video
+            src="/images/hero-new.MP4"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            className="h-full w-full object-cover"
+            aria-hidden
+            onLoadedMetadata={(e) => {
+              try {
+                e.currentTarget.currentTime = 0
+                e.currentTarget.play()
+              } catch (err) {
+                // ignore autoplay/play promise errors
+              }
+            }}
           />
         </motion.div>
       </div>
