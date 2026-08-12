@@ -52,7 +52,7 @@ const serviceCards = [
 
 export default function ServicesFixed() {
   return (
-    <section className="py-20 bg-white">
+    <section className="pt-1 pb-20 bg-white">
       <div className="w-full max-w-none px-5 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
           <div className="space-y-6">
@@ -99,22 +99,26 @@ export default function ServicesFixed() {
         </div>
 
         <div className="mt-20">
-          <div className="rounded-[1.5rem] border border-[#E9E4DC] bg-[#F7F7F5] p-8">
-            <div className="inline-flex rounded-full bg-white/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-[#111112]">
-              Engineering Standards & Compliance
+          <div className="overflow-hidden rounded-[1.5rem] border border-[#E9E4DC] bg-[#F7F7F5] shadow-sm">
+            <div className="px-6 pt-6 sm:px-8 sm:pt-8">
+              <div className="inline-block rounded-md bg-[#FCE8E9] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-[#D71920]">
+                Engineering Standards & Compliance
+              </div>
             </div>
-            <h3 className="mt-5 text-2xl font-black text-[#111112] sm:text-3xl">
-              ASCE | ACI | EUROCODE | ETHIOPIAN BUILDING CODE
-            </h3>
-            <p className="mt-5 text-base leading-8 text-gray-600">
-              Designs are checked against applicable engineering standards using rigorous structural analysis and finite-element methods to ensure compliance, safety, and durability.
-            </p>
-            <div className="mt-8 grid gap-4 text-sm font-semibold uppercase tracking-[0.22em] text-[#111112] sm:grid-cols-2">
-              {['ASCE', 'ACI', 'EUROCODE', 'ETHIOPIAN BUILDING CODE'].map((item) => (
-                <div key={item} className="rounded-2xl border border-[#E9E4DC] bg-[#F7F7F5] px-4 py-4 text-center">
-                  {item}
-                </div>
-              ))}
+            <div className="p-6 sm:p-8">
+              <h3 className="text-2xl font-black text-[#111112] sm:text-3xl">
+                ASCE | ACI | EUROCODE | ETHIOPIAN BUILDING CODE
+              </h3>
+              <p className="mt-5 text-base leading-8 text-gray-600">
+                Designs are checked against applicable engineering standards using rigorous structural analysis and finite-element methods to ensure compliance, safety, and durability.
+              </p>
+              <div className="mt-8 grid gap-4 text-sm font-semibold uppercase tracking-[0.22em] text-[#111112] sm:grid-cols-2">
+                {['ASCE', 'ACI', 'EUROCODE', 'ETHIOPIAN BUILDING CODE'].map((item) => (
+                  <div key={item} className="rounded-2xl border border-[#E9E4DC] bg-[#F7F7F5] px-4 py-4 text-center">
+                    {item}
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -137,16 +141,20 @@ export default function ServicesFixed() {
             </div>
           </div>
 
-          <div className="rounded-[1.5rem] border border-[#E9E4DC] bg-[#F7F7F5] p-8">
-            <div className="inline-flex rounded-full bg-white/90 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-[#111112]">
-              Value Engineering
+          <div className="overflow-hidden rounded-[1.5rem] border border-[#E9E4DC] bg-[#F7F7F5] shadow-sm">
+            <div className="px-6 pt-6 sm:px-8 sm:pt-8">
+              <div className="inline-block rounded-md bg-[#FCE8E9] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.35em] text-[#D71920]">
+                Value Engineering
+              </div>
             </div>
-            <h3 className="mt-5 text-2xl font-black text-[#111112] sm:text-3xl">
-              Structural Integrity Meets Cost Optimization
-            </h3>
-            <p className="mt-5 max-w-3xl text-base leading-8 text-gray-600">
-              Kenmos optimizes structural systems, material quantities, member sizes, concrete grades, steel grades, and detailing while maintaining safety, performance, and durability.
-            </p>
+            <div className="p-6 sm:p-8">
+              <h3 className="text-2xl font-black text-[#111112] sm:text-3xl">
+                Structural Integrity Meets Cost Optimization
+              </h3>
+              <p className="mt-5 max-w-3xl text-base leading-8 text-gray-600">
+                Kenmos optimizes structural systems, material quantities, member sizes, concrete grades, steel grades, and detailing while maintaining safety, performance, and durability.
+              </p>
+            </div>
           </div>
         </div>
       </div>

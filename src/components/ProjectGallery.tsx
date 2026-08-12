@@ -14,11 +14,15 @@ export default function ProjectGallery({ images }: Props) {
 
   return (
     <div>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
         {images.map((src, i) => (
-          <button key={i} onClick={() => openAt(i)} className="overflow-hidden rounded-md bg-gray-50">
+          <button
+            key={i}
+            onClick={() => openAt(i)}
+            className="overflow-hidden rounded-md bg-gray-50 transition hover:bg-gray-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-[#D71920]/40"
+          >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={src} alt={`Project image ${i+1}`} className="w-full h-48 object-cover" />
+            <img src={src} alt={`Project image ${i+1}`} className="w-full h-56 object-contain p-3" />
           </button>
         ))}
       </div>

@@ -16,7 +16,7 @@ export default function ServicesPage() {
           { label: 'Services' },
         ]}
       />
-      <div className="pt-navbar">
+      <div className="pt-0">
         <Services />
       </div>
       <Footer />

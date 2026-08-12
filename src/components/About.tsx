@@ -13,7 +13,7 @@ const About = () => {
           <div className="relative flex justify-center">
             <div className="relative w-full max-w-[760px] overflow-hidden rounded-[2.2rem]">
               <div className="absolute inset-0 translate-y-6 rounded-[2.2rem] border border-[#D71920]/70" />
-              <div className="relative z-10 overflow-hidden rounded-[1.75rem] shadow-[0_24px_55px_rgba(17,17,17,0.12)] aspect-video">
+              <div className="relative z-10 overflow-hidden rounded-[1.75rem] shadow-[0_32px_90px_rgba(17,17,17,0.14)] aspect-video bg-black">
                 <video
                   src="/images/about_collage_1.mp4"
                   poster="/images/about_collage_1.png"
@@ -22,7 +22,7 @@ const About = () => {
                   loop
                   playsInline
                   preload="metadata"
-                  className="h-full w-full object-contain"
+                  className="h-full w-full object-cover"
                   aria-label="Kenmos Structural Engineering design collage"
                 />
               </div>

@@ -7,7 +7,6 @@ export const brandMedia = {
 
   about: {
     collage1: '/images/about_collage_1.png',
-    collage2: '/images/about_collage_2.png',
   },
 
   // These are kept for compatibility with existing components.
@@ -155,7 +154,7 @@ export const industries = [
     title: 'Commercial Developments',
     description:
       'Structural designs for high-rise towers, malls, offices, and mixed-use commercial properties.',
-    image: brandMedia.industries.commercial,
+    image: '/images/Commercial Developments.jpg',
   },
 
   {
@@ -163,7 +162,7 @@ export const industries = [
     title: 'Industrial & Steel Structures',
     description:
       'Heavy industrial structures, warehouses, factory sheds, and specialized steel construction designs.',
-    image: brandMedia.industries.industrial,
+    image: '/images/Industrial & Steel Structures.jpg',
   },
 
   {
@@ -171,7 +170,7 @@ export const industries = [
     title: 'Residential Complexes',
     description:
       'Multi-family residential apartments, luxury villas, and real estate housing developments.',
-    image: brandMedia.industries.residential,
+    image: '/images/Residential Complexes.jpg',
   },
 
   {
@@ -179,7 +178,7 @@ export const industries = [
     title: 'Institutional Projects',
     description:
       'Structural design for government buildings, universities, stadiums, and public spaces.',
-    image: brandMedia.industries.institutional,
+    image: '/images/Institutional Projects.jpg',
   },
 
   {
@@ -187,7 +186,7 @@ export const industries = [
     title: 'Hospitality Projects',
     description:
       'Luxury hotel designs, resort structures, and recreational facilities combining luxury with safety.',
-    image: brandMedia.industries.hospitality,
+    image: '/images/Hospitality Projects.jpg',
   },
 
   {
@@ -195,7 +194,7 @@ export const industries = [
     title: 'Infrastructure & Specialized Works',
     description:
       'Bridges, retaining structures, sports complexes, and specialized steel/concrete structures.',
-    image: brandMedia.industries.infrastructure,
+    image: '/images/Infrastructure & Specialized Works.jpg',
   },
 ] as const
 
@@ -206,7 +205,7 @@ export const projects = [
     category: 'Institutional',
     description:
       'Owner: House of People Representative. Lead Consultant: Addis Mebratu Consult + 5-7. Status: Under Preliminary Design.',
-    image: '/images/parliament.jpg',
+    image: '/images/Parliament Building.jpg',
   },
 
   {
@@ -215,7 +214,7 @@ export const projects = [
     category: 'Institutional',
     description:
       'Structural engineering services provided by Kenmos Engineering.',
-    image: '/images/ethiopian-air-force.jpg',
+    image: '/images/Ethiopian Air Force Sport Center.jpg',
   },
 
   {
@@ -224,7 +223,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Architects: Million Samuel. Structural: Kenmos Engineering. Status: Completed.',
-    image: '/images/enat-building.jpg',
+    image: '/images/Enat Building (Office Building).jpg',
   },
 
   {
@@ -233,7 +232,7 @@ export const projects = [
     category: 'Hospitality',
     description:
       'Lead Consultant: Tilahun Bekele. Structural: Kenmos Engineering.',
-    image: '/images/ellelie-hotel.jpg',
+    image: '/images/Ellelie Hotel.jpg',
   },
 
   {
@@ -242,7 +241,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Lead Consultant: Mesfin Architects. Structural: Kenmos Engineering.',
-    image: '/images/eliyana-mall-hotel.jpg',
+    image: '/images/Eliyana Mall & Hotel.jpg',
   },
 
   {
@@ -251,7 +250,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Lead Consultant: Mesfin Architects. Structural: Kenmos Engineering.',
-    image: '/images/dh-geda-tower.jpg',
+    image: '/images/DH Geda Tower.jpg',
   },
 
   {
@@ -260,7 +259,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Lead Consultant: Mesfin Architects. Structural: Kenmos Engineering.',
-    image: '/images/lex-plaza.jpg',
+    image: '/images/Lex Plaza.jpg',
   },
 
   {
@@ -269,7 +268,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Lead Consultant: Fasil Georgis. Structural: Kenmos Engineering.',
-    image: '/images/nigist-tower.jpg',
+    image: '/images/Nigist Tower.jpg',
   },
 
   {
@@ -278,7 +277,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Lead Consultant: Mesfin Architects. Structural: Kenmos Engineering.',
-    image: '/images/medhanialem-mall.jpg',
+    image: '/images/Medhanialem Mall.jpg',
   },
 
   {
@@ -287,7 +286,7 @@ export const projects = [
     category: 'Hospitality',
     description:
       'Lead Consultant: Mesfin Architects. Structural: Kenmos Engineering.',
-    image: '/images/capital-hotel.jpg',
+    image: '/images/Capital Hotel.jpg',
   },
 
   {
@@ -296,7 +295,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Lead Consultant: Mesfin Architects. Structural: Kenmos Engineering.',
-    image: '/images/athlet-birhane-adere.jpg',
+    image: '/images/Athlet Birhane Adere Mall.jpg',
   },
 
   {
@@ -305,7 +304,7 @@ export const projects = [
     category: 'Hospitality',
     description:
       'Lead Consultant: Jdaw Consult. Structural: Kenmos Engineering.',
-    image: '/images/four-points-sheraton.jpg',
+    image: '/images/Four Points by Sheraton Hotel (31 Story).jpg',
   },
 
   {
@@ -314,7 +313,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Lead Consultant: Geretta Consult. Structural: Kenmos Engineering.',
-    image: '/images/ema-office.jpg',
+    image: '/images/EMA Office Building (25 Story).jpg',
   },
 
   {
@@ -323,7 +322,7 @@ export const projects = [
     category: 'Hospitality',
     description:
       'Structural: Kenmos Engineering.',
-    image: '/images/marriott-addis.jpg',
+    image: '/images/Marriott Hotel in Addis Ababa.jpg',
   },
 
   {
@@ -332,7 +331,7 @@ export const projects = [
     category: 'Hospitality',
     description:
       'Structural: Kenmos Engineering.',
-    image: '/images/emaysru-hotel.jpg',
+    image: '/images/Emaysru Hotel (Mekele) (25 Story).jpg',
   },
 
   {
@@ -341,7 +340,7 @@ export const projects = [
     category: 'Institutional',
     description:
       'Lead Consultant: Addis Mebratu. Design Completed.',
-    image: '/images/ethiopian-national-theater.jpg',
+    image: '/images/Ethiopian National Theater.jpg',
   },
 
   {
@@ -350,7 +349,7 @@ export const projects = [
     category: 'Institutional',
     description:
       'A stadium with a capacity of 40,000 spectators at Jimma University. Status: Under Construction. Structural: Kenmos Engineering.',
-    image: '/images/jimma-stadium.jpg',
+    image: '/images/Jimma University Stadium (40,000 Spectators).jpg',
   },
 
   {
@@ -359,7 +358,7 @@ export const projects = [
     category: 'Institutional',
     description:
       'A stadium with a capacity of 20,000 spectators at Adama University. Construction Completed. Structural: Kenmos Engineering.',
-    image: '/images/adama-stadium.jpg',
+    image: '/images/Adama University Stadium (20,000 Spectators).jpg',
   },
 
   {
@@ -368,7 +367,7 @@ export const projects = [
     category: 'Institutional',
     description:
       'A stadium with a capacity of 55,000 spectators. Lead Consultant: Shigez Consult. Structural: Kenmos Engineering.',
-    image: '/images/harar-stadium.jpg',
+    image: '/images/Harar Stadium (55,000 Spectators).jpg',
   },
 
   {
@@ -377,7 +376,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Status: Under Construction. Structural: Kenmos Engineering.',
-    image: '/images/nib-bank.jpg',
+    image: '/images/NIB Bank.jpg',
   },
 
   {
@@ -386,7 +385,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Status: Under Construction. Lead Consultant: Jdaw Consult. Structural: Kenmos Engineering.',
-    image: '/images/zemen-bank.jpg',
+    image: '/images/Zemen Bank.jpg',
   },
 
   {
@@ -395,7 +394,7 @@ export const projects = [
     category: 'Institutional',
     description:
       'Lead Consultant: ETG. Structural: Kenmos Engineering.',
-    image: '/images/dire-dawa-stadium.jpg',
+    image: '/images/Dire Dawa Stadium.jpg',
   },
 
   {
@@ -404,7 +403,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Lead Consultant: Addis Mebratu. Structural: Kenmos Engineering.',
-    image: '/images/zefmesh.jpg',
+    image: '/images/Zefmesh.jpg',
   },
 
   {
@@ -413,7 +412,7 @@ export const projects = [
     category: 'Infrastructure',
     description:
       'Lead Consultant: MU Engineering PLC. Structural: Kenmos Engineering.',
-    image: '/images/eepco.jpg',
+    image: '/images/EEPCO.jpg',
   },
 
   {
@@ -422,7 +421,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Lead Consultant: Geretta Consult. Structural: Kenmos Engineering.',
-    image: '/images/orda.jpg',
+    image: '/images/ORDA (25 Story).jpg',
   },
 
   {
@@ -431,7 +430,7 @@ export const projects = [
     category: 'Hospitality',
     description:
       'Status: Under Design. Structural: Kenmos Engineering.',
-    image: '/images/hilton.jpg',
+    image: '/images/Hilton.jpg',
   },
 
   {
@@ -440,7 +439,7 @@ export const projects = [
     category: 'Hospitality',
     description:
       'Lead Consultant: Jdaw Consult. Structural: Kenmos Engineering.',
-    image: '/images/mekele-hotel.jpg',
+    image: '/images/Mekele Hotel (28 Story).jpg',
   },
 
   {
@@ -449,7 +448,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Owner: Nho Real Estate. Architect: Italian Company.',
-    image: '/images/mixed-use-35-story.jpg',
+    image: '/images/Mixed Use Building 5B + G + 35.jpg',
   },
 
   {
@@ -458,7 +457,7 @@ export const projects = [
     category: 'Institutional',
     description:
       'Lead Consultant: Zeleke Belay.',
-    image: '/images/oic-headquarters.jpg',
+    image: '/images/OIC Headquarters 4B + G + 40.jpg',
   },
 
   {
@@ -467,7 +466,7 @@ export const projects = [
     category: 'Residential',
     description:
       'Structural Design & Consultancy. Client: Hosae Trading House PLC. Contractor: Bamacon Engineering PLC. Project Status: Under Construction.',
-    image: '/images/hosea-luxury-apartment.jpg',
+    image: '/images/Hosea Luxury Apartment 5B + G + 25.jpg',
   },
 
   {
@@ -476,7 +475,7 @@ export const projects = [
     category: 'Commercial',
     description:
       'Structural Design & Consultancy. Client: MWS Trading PLC. Contractor: China Jiangsu International Economic & Technical Corporation Group Ltd.',
-    image: '/images/manson-arada-luxury-mall.jpg',
+    image: '/images/Manson Arada Luxury Mall.jpg',
   },
 ] as const
 

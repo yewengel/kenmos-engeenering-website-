@@ -58,8 +58,9 @@ const Navigation = () => {
   ]
 
   const heroWhiteNavItemIds = ['home', 'about', 'services', 'projects', 'industries', 'process', 'more', 'contact']
-  const forceScrolledRoutes = ['about', 'services', 'projects', 'industries', 'process', 'careers', 'events', 'contact']
-  const isForceScrolledRoute = forceScrolledRoutes.some((route) => pathname === `/${route}` || pathname.startsWith(`/${route}/`)) || pathname.startsWith('/articles')
+  const forceScrolledRoutes = ['about', 'services', 'projects', 'industries', 'process', 'articles', 'careers', 'events', 'contact']
+  const isForceScrolledPage = forceScrolledRoutes.some((route) => pathname === `/${route}` || pathname.startsWith(`/${route}/`))
+  const isDetailPageRoute = pathname.startsWith('/projects/') || pathname.startsWith('/industries/')
 
   const getLinkTextClass = (itemId: string, isHeroVisibleState: boolean) => {
     if (isHeroVisibleState && heroWhiteNavItemIds.includes(itemId)) {
@@ -84,14 +85,14 @@ const Navigation = () => {
       const isHomePage = pathname === '/'
       const isTop = window.scrollY <= 20
 
-      setScrolled(!isTop || isForceScrolledRoute)
-      setIsHeroVisible(isHomePage && isTop)
+      setScrolled(isForceScrolledPage || !isTop || isDetailPageRoute)
+      setIsHeroVisible(isHomePage ? isTop : false)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
     handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [pathname, isForceScrolledRoute])
+  }, [pathname, isForceScrolledPage, isDetailPageRoute])
 
   useEffect(() => {
     setMoreOpen(false)
