@@ -73,54 +73,58 @@ export default function ProcessPage() {
 
       <section className="bg-white px-4 py-16 sm:px-6 md:py-20 lg:px-8">
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-12 lg:grid-cols-[0.82fr_1.18fr] lg:items-start lg:gap-16">
-            <div className="lg:sticky lg:top-28">
-              <div className="relative overflow-hidden rounded-[1.5rem] border border-[#E9E4DC] bg-[#F7F7F5] p-4 shadow-[0_18px_50px_rgba(17,17,17,0.08)] sm:p-6">
-                <div className="pointer-events-none absolute inset-4 border border-[#D71920]/15 sm:inset-6" />
-                <div className="pointer-events-none absolute left-8 top-8 h-2 w-2 bg-[#D71920] sm:left-10 sm:top-10" />
-                <img
-                  src="/images/process_ph.jpg"
-                  alt="Kenmos structural engineering process"
-                  className="relative aspect-[4/5] w-full object-contain"
-                />
-              </div>
-              <div className="mt-5 flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.28em] text-[#D71920]">
-                <span className="h-px w-10 bg-[#D71920]" />
-                Precision from brief to handover
-              </div>
-            </div>
+          {/* 1. Intro Text */}
+          <div className="max-w-3xl mb-8">
+            <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#D71920] md:text-xs">
+              Step-by-Step Delivery
+            </span>
+            <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-[#111112] sm:text-4xl lg:text-5xl">
+              How We Deliver Structural Excellence
+            </h2>
+            <p className="mt-5 max-w-2xl text-base leading-8 text-gray-600 sm:text-lg">
+              From the first consultation to final site supervision, our process combines rigorous engineering analysis, practical design decisions, and disciplined project execution.
+            </p>
+          </div>
 
-            <div>
-              <div className="max-w-3xl">
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-[#D71920] md:text-xs">
-                  Step-by-Step Delivery
-                </span>
-                <h2 className="mt-3 text-3xl font-black leading-tight tracking-tight text-[#111112] sm:text-4xl lg:text-5xl">
-                  How We Deliver Structural Excellence
-                </h2>
-                <p className="mt-5 max-w-2xl text-base leading-8 text-gray-600 sm:text-lg">
-                  From the first consultation to final site supervision, our process combines rigorous engineering analysis, practical design decisions, and disciplined project execution.
-                </p>
-              </div>
+          {/* 2. Full-Width Illustration Panel */}
+          <div className="mb-12 relative overflow-hidden rounded-[1.5rem] border border-[#E9E4DC] bg-[#F7F7F5] px-4 py-2 sm:px-6 sm:py-3 shadow-[0_18px_50px_rgba(17,17,17,0.08)] w-full">
+            <div className="pointer-events-none absolute inset-x-4 inset-y-2 border border-[#D71920]/15 sm:inset-x-6 sm:inset-y-3" />
+            <div className="pointer-events-none absolute left-8 top-6 h-2 w-2 bg-[#D71920] sm:left-10 sm:top-8" />
+            <img
+              src="/images/process_ph.jpg"
+              alt="Kenmos structural engineering process"
+              className="relative w-full h-[220px] md:h-[340px] block object-cover object-left rounded-[1rem]"
+            />
+          </div>
 
-              <div className="relative mt-10 pl-7 sm:pl-10">
-                <div className="absolute bottom-5 left-[0.45rem] top-5 w-px bg-[#D71920]/25 sm:left-[0.6rem]" />
-                <div className="space-y-4">
-                  {processStages.map((stage) => (
-                    <article key={stage.step} className="relative rounded-[1rem] border border-[#E9E4DC] bg-white p-5 shadow-[0_12px_30px_rgba(17,17,17,0.05)] transition-shadow duration-300 hover:shadow-[0_18px_38px_rgba(17,17,17,0.09)] sm:p-6">
-                      <div className="absolute -left-[2.05rem] top-6 flex h-6 w-6 items-center justify-center rounded-full border-4 border-white bg-[#D71920] shadow-[0_0_0_1px_rgba(215,25,32,0.25)] sm:-left-[2.65rem]" aria-hidden />
-                      <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:gap-5">
-                        <span className="shrink-0 text-xs font-black tracking-[0.2em] text-[#D71920]">{stage.step}</span>
-                        <div>
-                          <h3 className="text-base font-bold leading-tight text-[#111112] sm:text-lg">{stage.title}</h3>
-                          <p className="mt-2 text-sm leading-7 text-gray-600">{stage.description}</p>
-                        </div>
-                      </div>
-                    </article>
-                  ))}
-                </div>
-              </div>
-            </div>
+          {/* 3. Cards Grid */}
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
+            {processStages.map((stage) => {
+              // Determine grid span class
+              const isFirst = stage.step === '01';
+              const spanClass = isFirst ? 'md:col-span-3' : 'col-span-1';
+
+              return (
+                <article
+                  key={stage.step}
+                  className={
+                    `group relative flex flex-col rounded-[1rem] border border-[#E9E4DC] bg-white p-5 sm:p-6 shadow-[0_12px_30px_rgba(17,17,17,0.05)] transition-all duration-300 hover:-translate-y-1 hover:border-[#D71920]/25 hover:shadow-[0_18px_38px_rgba(17,17,17,0.09)] h-full ` +
+                    spanClass
+                  }
+                >
+                  <div className="absolute left-0 top-0 h-[3px] w-0 bg-[#D71920] transition-all duration-300 group-hover:w-full" />
+                  <span className="text-xs font-black tracking-[0.2em] text-[#D71920] mb-2 uppercase block">
+                    {stage.step}
+                  </span>
+                  <h3 className="text-base font-bold leading-snug text-[#111112] sm:text-lg mb-2 min-h-[2.5rem] sm:min-h-[3rem] flex items-start">
+                    {stage.title}
+                  </h3>
+                  <p className="text-sm leading-relaxed text-gray-600 flex-grow">
+                    {stage.description}
+                  </p>
+                </article>
+              )
+            })}
           </div>
 
           <div className="mt-16 border-t border-[#E9E4DC] pt-10 md:mt-20 md:pt-12">
