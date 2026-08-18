@@ -83,10 +83,22 @@ const Navigation = () => {
   useEffect(() => {
     const handleScroll = () => {
       const isHomePage = pathname === '/'
-      const isTop = window.scrollY <= 20
 
+      // The homepage is one continuous scroll story pinned behind the nav
+      // (see HomeScrollStory) rather than a short hero — so "hero visible"
+      // (transparent header, white nav text) needs to track the story's
+      // full scroll track, not just the first 20px of scroll.
+      if (isHomePage) {
+        const story = document.getElementById('home-scroll-story')
+        const withinStory = story ? story.getBoundingClientRect().bottom > 84 : window.scrollY <= 20
+        setScrolled(isForceScrolledPage || !withinStory || isDetailPageRoute)
+        setIsHeroVisible(withinStory)
+        return
+      }
+
+      const isTop = window.scrollY <= 20
       setScrolled(isForceScrolledPage || !isTop || isDetailPageRoute)
-      setIsHeroVisible(isHomePage ? isTop : false)
+      setIsHeroVisible(false)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
