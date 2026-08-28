@@ -78,9 +78,20 @@
     width: 100%;
     min-height: 100%;
     max-width: 100%;
+    /* overflow-x: hidden here (even paired with an explicit overflow-y: visible)
+       makes the browser compute BOTH axes to 'auto' per the CSS Overflow spec's
+       visible/non-visible pairing rule — silently turning html/body into scroll
+       containers, which breaks position:sticky everywhere on the site (the sticky
+       nearest-ancestor search stops here instead of reaching the real viewport
+       scroller). 'clip' is exempt from that pairing rule, so it prevents horizontal
+       overflow without the side effect. Keep the 'hidden' line first as a fallback
+       for browsers that don't understand 'clip' (Chrome 90-, Firefox 97-, Safari 15-). */
     overflow-x: hidden;
+    overflow-x: clip;
+    overflow-y: visible;
     scroll-behavior: smooth;
     text-size-adjust: 100%;
+    position: relative;
   }
 
   button,
@@ -491,7 +502,12 @@ body.mobile-no-motion .carousel-slide[style] {
   main,
   header,
   footer {
+    /* 'clip' (not 'hidden') — see the note on the base html/body rule above.
+       'hidden' here also promotes overflow-y to 'auto' on every section/main on the
+       site, turning each into a scroll container and breaking position:sticky for
+       any sticky descendant (e.g. the home scroll story) specifically on mobile. */
     overflow-x: hidden;
+    overflow-x: clip;
   }
 }
 
@@ -546,4 +562,55 @@ section > div[class*="mx-auto"] {
   .nav-desktop .logo-left { justify-self: start; }
   .nav-desktop nav { justify-self: center; }
   .nav-desktop .nav-right { justify-self: end; }
+}
+
+/* Cinematic scroll story overrides */
+#home-scroll-story {
+  will-change: transform;
+  -webkit-font-smoothing: antialiased;
+}
+
+#home-scroll-story canvas {
+  max-width: none !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  will-change: transform;
+}
+
+#home-scroll-story h1,
+#home-scroll-story h2,
+#home-scroll-story p,
+#home-scroll-story span {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Prevent image ghost outlines in the loading overlay */
+#home-scroll-story * {
+  -webkit-tap-highlight-color: transparent;
+}
+
+html.home-scroll-smooth {
+  scroll-behavior: auto;
+}
+
+body.is-home-page {
+  background-image: none;
+  background-color: #1b1f25;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #home-scroll-story {
+    height: auto !important;
+  }
+  #home-scroll-story > div {
+    position: relative !important;
+    height: auto !important;
+    min-height: 100vh;
+    padding: 6rem 0;
+  }
 }

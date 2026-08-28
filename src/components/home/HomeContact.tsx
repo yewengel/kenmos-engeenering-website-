@@ -40,9 +40,9 @@ const HomeContact = () => {
 
   return (
     <section id="contact" className="border-t border-[#111111]/10 bg-white">
-      <div className="grid lg:grid-cols-2">
+      <div className="grid lg:min-h-[62vh] lg:grid-cols-2">
         {/* Left — charcoal panel: statement + reachability */}
-        <div className="relative overflow-hidden bg-[#111112] px-6 py-20 text-white sm:px-10 md:py-28 lg:px-16">
+        <div className="relative flex flex-col justify-center overflow-hidden bg-[#111112] px-6 py-8 text-white sm:px-10 sm:py-9 lg:px-16 lg:py-10">
           <div className="absolute inset-0 opacity-[0.06]">
             <div className="absolute inset-0 bg-[radial-gradient(#ffffff_1px,transparent_1px)] bg-[size:28px_28px]" />
           </div>
@@ -50,22 +50,22 @@ const HomeContact = () => {
           <div className="relative z-10 max-w-lg">
             <Reveal>
               <span className="text-[11px] font-bold uppercase tracking-[0.4em] text-[#D71920]">Let&apos;s Collaborate</span>
-              <h2 className="mt-4 text-[clamp(1.9rem,4vw,2.8rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white">
+              <h2 className="mt-3 text-[clamp(1.9rem,4vw,2.8rem)] font-semibold leading-[1.1] tracking-[-0.02em] text-white">
                 Ready to build your vision with precision?
               </h2>
-              <p className="mt-5 text-[14px] font-light leading-relaxed text-white/60 md:text-[15px]">
+              <p className="mt-4 text-[14px] font-light leading-relaxed text-white/60 md:text-[15px]">
                 Discuss your building blueprints, steel truss connections, or value engineering parameters with our lead structural engineer.
               </p>
             </Reveal>
 
-            <div className="mt-12 flex flex-col">
+            <div className="mt-6 flex flex-col">
               {contactInfo.map((info, i) => (
                 <Reveal key={info.title} delay={i * 0.06}>
                   <a
                     href={info.href}
                     target={info.href?.startsWith('http') ? '_blank' : undefined}
                     rel={info.href?.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className={`flex items-start gap-4 border-t border-white/10 py-5 ${!info.href ? 'pointer-events-none' : 'group'}`}
+                    className={`flex items-start gap-4 border-t border-white/10 py-3 ${!info.href ? 'pointer-events-none' : 'group'}`}
                   >
                     <info.icon className="mt-0.5 h-4 w-4 shrink-0 text-[#D71920]" strokeWidth={1.7} />
                     <div className="min-w-0">
@@ -83,19 +83,19 @@ const HomeContact = () => {
         </div>
 
         {/* Right — cream panel: the form */}
-        <div className="bg-[#F7F4EF] px-6 py-20 sm:px-10 md:py-28 lg:px-16">
+        <div className="flex flex-col justify-center bg-[#F7F4EF] px-6 py-8 sm:px-10 sm:py-9 lg:px-16 lg:py-10">
           <div className="max-w-lg">
             <Reveal>
               <h3 className="font-heading text-2xl font-bold tracking-tight text-[#141414] md:text-3xl">
                 Discuss Your Next Project
               </h3>
-              <p className="mt-3 text-[14px] font-light leading-relaxed text-[#666666]">
+              <p className="mt-2 text-[14px] font-light leading-relaxed text-[#666666]">
                 Fill in your details and we&apos;ll get back to you once our team has reviewed your message.
               </p>
             </Reveal>
 
             <Reveal delay={0.1}>
-              <form onSubmit={handleSubmit} className="mt-9 flex flex-col gap-6">
+              <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-4">
                 <div className="grid gap-6 sm:grid-cols-2">
                   <div className="flex flex-col gap-2">
                     <label className="text-[10px] font-bold uppercase tracking-[0.24em] text-[#111111]/70">
